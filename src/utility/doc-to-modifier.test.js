@@ -1,22 +1,19 @@
-// import docToModifier from './doc-to-modifier'
+import docToModifier from './doc-to-modifier'
 
-// FIXME
-// This test throws an error since it depends on MongoObject, and
-// MongoObject is a global that comes from aldeed:simple-schema.
-// Since it's a meteor package, it can't be tested without
-// meteor, so for now we have to skip this test.
 xit('Should do something', () => {
-  /* const doc = {
+  const doc = {
     a: 1,
-    b: '2'
+    b: '2',
+    c: {
+      a: ['b', 'c']
+    }
   }
   const options = {
     keepArrays: true,
     keepEmptyStrings: true,
     fields: [ 'a', 'b' ]
   }
-  const expected = {}
-  */
-  // const result = docToModifier(doc, options)
-  // expect(result).toEqual(expected)
+  const expected = {a: 1, b: '2', 'c.a': ['b', 'c']}
+  const result = docToModifier(doc, options)
+  expect(result).toEqual(expected)
 })

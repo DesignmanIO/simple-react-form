@@ -63,8 +63,7 @@
       "xit",
       "expect",
       "test",
-      "jest",
-      "MongoObject"
+      "jest"
     ]
   }
 }
