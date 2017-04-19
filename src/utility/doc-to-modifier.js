@@ -2,7 +2,7 @@ import cleanFields from './clean-fields'
 import cleanNulls from './clean-nulls'
 import reportNulls from './report-nulls'
 import isEmpty from 'lodash/isEmpty'
-import {flaten} from 'flat'
+import {flatten} from 'flat'
 
 export default function (doc, options) {
   var modifier = {}
